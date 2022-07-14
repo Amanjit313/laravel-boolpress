@@ -10,6 +10,7 @@ import ContactsComp from './components/pages/ContactsComp';
 
 const router = new VueRouter({
     mode: 'history',
+    linkExactActiveClass: 'active',
     routes: [
         {
             path: '/',
