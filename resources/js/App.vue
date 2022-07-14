@@ -30,7 +30,7 @@ export default {
     data(){
         return{
             apiUrl: '/api/posts',
-            posts: {}
+            posts: null
         }
     },
 

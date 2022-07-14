@@ -1918,7 +1918,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       apiUrl: '/api/posts',
-      posts: {}
+      posts: null
     };
   },
   methods: {
@@ -1963,7 +1963,25 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'BlogComp'
+  name: 'BlogComp',
+  data: function data() {
+    return {
+      apiUrl: '/api/posts',
+      posts: null
+    };
+  },
+  methods: {
+    getApi: function getApi() {
+      var _this = this;
+
+      axios.get(this.apiUrl).then(function (res) {
+        _this.posts = res.data.posts;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getApi();
+  }
 });
 
 /***/ }),
@@ -2079,7 +2097,11 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("\n        BLOG\n    ")]);
+  return _c("div", [_c("h1", [_vm._v("I MIEI POSTS:")]), _vm._v(" "), _c("div", _vm._l(_vm.posts, function (post) {
+    return _c("ul", {
+      key: post.id
+    }, [_c("li", [_vm._v(_vm._s(post.name))])]);
+  }), 0)]);
 };
 
 var staticRenderFns = [];
