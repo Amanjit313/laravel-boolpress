@@ -1,17 +1,25 @@
 <template>
 
-    <div class="container">
+    <HeaderComp />
+
+<!--     <div class="container">
         <li v-for="post in posts" :key="post.id">
             <p>{{ post.name }}</p>
         </li>
-    </div>
+    </div> -->
 
 </template>
 
 <script>
 
+import HeaderComp from './components/partials/HeaderComp.vue';
+
 export default {
     name: 'App',
+
+    components:{
+        HeaderComp
+    },
 
     data(){
         return{

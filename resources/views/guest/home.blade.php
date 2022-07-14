@@ -9,7 +9,6 @@
 </head>
 <body>
 
-    <div>POST</div>
     <div id="app"></div>
 
     <script src="{{ asset('js/front.js') }}"></script>

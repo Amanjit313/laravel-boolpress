@@ -37346,9 +37346,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\amanj\OneDrive\Desktop\Coding\Boolean\Laravel\Esercizio 9 - Boolpress Api\laravel-api\resources\js\admin.js */"./resources/js/admin.js");
-__webpack_require__(/*! C:\Users\amanj\OneDrive\Desktop\Coding\Boolean\Laravel\Esercizio 9 - Boolpress Api\laravel-api\resources\sass\admin\style.scss */"./resources/sass/admin/style.scss");
-module.exports = __webpack_require__(/*! C:\Users\amanj\OneDrive\Desktop\Coding\Boolean\Laravel\Esercizio 9 - Boolpress Api\laravel-api\resources\sass\front\style.scss */"./resources/sass/front/style.scss");
+__webpack_require__(/*! C:\Users\amanj\OneDrive\Desktop\Coding\Boolean\Laravel\Esercizio 10 - Boolpress\laravel-boolpress\resources\js\admin.js */"./resources/js/admin.js");
+__webpack_require__(/*! C:\Users\amanj\OneDrive\Desktop\Coding\Boolean\Laravel\Esercizio 10 - Boolpress\laravel-boolpress\resources\sass\admin\style.scss */"./resources/sass/admin/style.scss");
+module.exports = __webpack_require__(/*! C:\Users\amanj\OneDrive\Desktop\Coding\Boolean\Laravel\Esercizio 10 - Boolpress\laravel-boolpress\resources\sass\front\style.scss */"./resources/sass/front/style.scss");
 
 
 /***/ })
