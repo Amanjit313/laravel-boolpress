@@ -1,14 +1,20 @@
 <template>
 
-    <div>
-        <h1>I MIEI POSTS:</h1>
+    <div class="blog">
+        <div class="blog-container">
 
-        <div>
-            <ul v-for='post in posts' :key='post.id'>
-                <li>{{ post.name }}</li>
-            </ul>
+            <h1 class="posts-title">POSTS</h1>
+
+            <div class="posts">
+                <ul v-for='post in posts' :key='post.id'>
+                    <li class="id">#{{ post.id }}</li>
+                    <li>{{ post.name }}</li>
+                    <li>{{ post.location }}</li>
+                    <li>{{ post.email }}</li>
+                </ul>
+            </div>
+
         </div>
-
     </div>
 
 </template>
@@ -40,5 +46,48 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.blog{
+    background-color: #161E2B;
+}
+
+.blog-container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.posts-title{
+    background-color: #161E2B;
+    color: aqua;
+    text-align: center;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 5px solid aqua;
+}
+
+.posts{
+    background-color: #161E2B;
+    border-left: 5px solid aqua;
+    border-right: 5px solid aqua;
+    border-bottom: 5px solid aqua;
+    color: aqua;
+}
+
+ul{
+    border-bottom: 2px solid aqua;
+    display: flex;
+}
+
+.id{
+    width: 10%;
+}
+
+li{
+    list-style: none;
+    padding: 5px;
+    width: 25%;
+}
 
 </style>
