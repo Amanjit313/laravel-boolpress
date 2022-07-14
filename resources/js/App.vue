@@ -1,12 +1,18 @@
 <template>
 
-    <HeaderComp />
+    <div>
 
-<!--     <div class="container">
-        <li v-for="post in posts" :key="post.id">
-            <p>{{ post.name }}</p>
-        </li>
-    </div> -->
+        <HeaderComp />
+
+    <!--     <div class="container">
+            <li v-for="post in posts" :key="post.id">
+                <p>{{ post.name }}</p>
+            </li>
+        </div> -->
+
+        <router-view></router-view>
+
+    </div>
 
 </template>
 
