@@ -28,6 +28,7 @@ export default {
 header{
     background-color: #161E2B;
     height: 10vh;
+    border-bottom: 2px solid aqua;
 }
 
 ul{

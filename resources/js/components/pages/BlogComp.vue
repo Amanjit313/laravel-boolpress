@@ -49,16 +49,18 @@ export default {
 
 .blog{
     background-color: #161E2B;
+    display: flex;
+    color: aqua;
 }
 
 .blog-container{
     width: 60%;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 .posts-title{
     background-color: #161E2B;
-    color: aqua;
     text-align: center;
     height: 10vh;
     align-items: center;
@@ -72,7 +74,6 @@ export default {
     border-left: 5px solid aqua;
     border-right: 5px solid aqua;
     border-bottom: 5px solid aqua;
-    color: aqua;
 }
 
 ul{
