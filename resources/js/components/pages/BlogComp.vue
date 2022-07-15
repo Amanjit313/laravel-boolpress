@@ -13,17 +13,17 @@
                         <th>NAME</th>
                         <th>LOCATION</th>
                         <th>EMAIL</th>
+                        <th>DETAILS</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr v-for='post in posts' :key='post.id'>
-                        <router-link class="router-style" :to="{name:'details', params:{slug: post.slug}}">
-                            <td>#{{ post.id }}</td>
-                            <td>{{ post.name }}</td>
-                            <td>{{ post.location }}</td>
-                            <td>{{ post.email }}</td>
-                        </router-link>
+                        <td>#{{ post.id }}</td>
+                        <td>{{ post.name }}</td>
+                        <td>{{ post.location }}</td>
+                        <td>{{ post.email }}</td>
+                        <td class="details-link"><router-link class="details-style" :to="{name:'details', params:{slug: post.slug}}">Details</router-link></td>
                     </tr>
                 </tbody>
 
@@ -92,16 +92,13 @@ table{
     border-bottom: 5px solid aqua;
 }
 
-.router-style{
-    color: aqua;
-    width: 10%;
-}
-
 tr{
     width: 100%;
 }
 
-tbody tr{
+.details-style{
+
+    color: aqua;
 
     &:hover{
         opacity: 50%;

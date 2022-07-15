@@ -2123,8 +2123,10 @@ var render = function render() {
   }, [_vm._v("POSTS")]), _vm._v(" "), _c("table", [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.posts, function (post) {
     return _c("tr", {
       key: post.id
+    }, [_c("td", [_vm._v("#" + _vm._s(post.id))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(post.name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(post.location))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(post.email))]), _vm._v(" "), _c("td", {
+      staticClass: "details-link"
     }, [_c("router-link", {
-      staticClass: "router-style",
+      staticClass: "details-style",
       attrs: {
         to: {
           name: "details",
@@ -2133,7 +2135,7 @@ var render = function render() {
           }
         }
       }
-    }, [_c("td", [_vm._v("#" + _vm._s(post.id))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(post.name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(post.location))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(post.email))])])], 1);
+    }, [_vm._v("Details")])], 1)]);
   }), 0)])])]);
 };
 
@@ -2141,7 +2143,7 @@ var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("thead", [_c("tr", [_c("th", [_vm._v("POST #ID")]), _vm._v(" "), _c("th", [_vm._v("NAME")]), _vm._v(" "), _c("th", [_vm._v("LOCATION")]), _vm._v(" "), _c("th", [_vm._v("EMAIL")])])]);
+  return _c("thead", [_c("tr", [_c("th", [_vm._v("POST #ID")]), _vm._v(" "), _c("th", [_vm._v("NAME")]), _vm._v(" "), _c("th", [_vm._v("LOCATION")]), _vm._v(" "), _c("th", [_vm._v("EMAIL")]), _vm._v(" "), _c("th", [_vm._v("DETAILS")])])]);
 }];
 render._withStripped = true;
 
@@ -2305,7 +2307,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".blog[data-v-02893632] {\n  background-color: #161E2B;\n  display: flex;\n  color: aqua;\n}\n.blog-container[data-v-02893632] {\n  width: 60%;\n  margin: 0 auto;\n  margin-top: 50px;\n}\n.posts-title[data-v-02893632] {\n  background-color: #161E2B;\n  text-align: center;\n  height: 10vh;\n  align-items: center;\n  justify-content: center;\n  display: flex;\n  border: 5px solid aqua;\n}\ntable[data-v-02893632] {\n  text-align: center;\n  border-left: 5px solid aqua;\n  border-right: 5px solid aqua;\n  border-bottom: 5px solid aqua;\n}\n.router-style[data-v-02893632] {\n  color: aqua;\n  width: 10%;\n}\ntr[data-v-02893632] {\n  width: 100%;\n}\ntbody tr[data-v-02893632]:hover {\n  opacity: 50%;\n  cursor: pointer;\n}\nth[data-v-02893632],\ntd[data-v-02893632] {\n  padding: 10px;\n  width: 10%;\n  border: 1px solid aqua;\n}", ""]);
+exports.push([module.i, ".blog[data-v-02893632] {\n  background-color: #161E2B;\n  display: flex;\n  color: aqua;\n}\n.blog-container[data-v-02893632] {\n  width: 60%;\n  margin: 0 auto;\n  margin-top: 50px;\n}\n.posts-title[data-v-02893632] {\n  background-color: #161E2B;\n  text-align: center;\n  height: 10vh;\n  align-items: center;\n  justify-content: center;\n  display: flex;\n  border: 5px solid aqua;\n}\ntable[data-v-02893632] {\n  text-align: center;\n  border-left: 5px solid aqua;\n  border-right: 5px solid aqua;\n  border-bottom: 5px solid aqua;\n}\ntr[data-v-02893632] {\n  width: 100%;\n}\n.details-style[data-v-02893632] {\n  color: aqua;\n}\n.details-style[data-v-02893632]:hover {\n  opacity: 50%;\n  cursor: pointer;\n}\nth[data-v-02893632],\ntd[data-v-02893632] {\n  padding: 10px;\n  width: 10%;\n  border: 1px solid aqua;\n}", ""]);
 
 // exports
 
