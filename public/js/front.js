@@ -2011,7 +2011,26 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'DetailsComp'
+  name: 'DetailsComp',
+  data: function data() {
+    return {
+      apiUrl: '/api/posts',
+      posts: ''
+    };
+  },
+  mounted: function mounted() {
+    this.getApi();
+  },
+  methods: {
+    getApi: function getApi() {
+      var _this = this;
+
+      axios.get(this.apiUrl + '/' + this.$route.params.slug).then(function (res) {
+        console.log(res.data);
+        _this.posts = res.data;
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -2192,8 +2211,8 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "home"
-  }, [_vm._v("\n        PAGINA DETAILS\n    ")]);
+    staticClass: "details"
+  }, [_vm._v("\n\n        " + _vm._s(_vm.posts.id) + "\n\n    ")]);
 };
 
 var staticRenderFns = [];
@@ -2345,7 +2364,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".home[data-v-45265ccb] {\n  background-color: #161E2B;\n  display: flex;\n  color: aqua;\n  height: 90vh; /* DA TOGLIERE DOPO */\n  justify-content: center;\n  align-items: center;\n  font-size: 5rem;\n}", ""]);
+exports.push([module.i, ".details[data-v-45265ccb] {\n  background-color: #161E2B;\n  display: flex;\n  color: aqua;\n  height: 90vh; /* DA TOGLIERE DOPO */\n  justify-content: center;\n  align-items: center;\n  font-size: 5rem;\n}", ""]);
 
 // exports
 
