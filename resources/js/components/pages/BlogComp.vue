@@ -5,16 +5,32 @@
 
             <h1 class="posts-title">POSTS</h1>
 
-            <div class="posts">
-                <ul v-for='post in posts' :key='post.id'>
-                    <li class="id">#{{ post.id }}</li>
-                    <li>{{ post.name }}</li>
-                    <li>{{ post.location }}</li>
-                    <li>{{ post.email }}</li>
-                </ul>
-            </div>
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>POST #ID</th>
+                        <th>NAME</th>
+                        <th>LOCATION</th>
+                        <th>EMAIL</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr v-for='post in posts' :key='post.id'>
+                        <router-link class="router-style" :to="{name:'details', params:{slug: post.slug}}">
+                            <td>#{{ post.id }}</td>
+                            <td>{{ post.name }}</td>
+                            <td>{{ post.location }}</td>
+                            <td>{{ post.email }}</td>
+                        </router-link>
+                    </tr>
+                </tbody>
+
+            </table>
 
         </div>
+
     </div>
 
 </template>
@@ -69,26 +85,35 @@ export default {
     border: 5px solid aqua;
 }
 
-.posts{
-    background-color: #161E2B;
+table{
+    text-align: center;
     border-left: 5px solid aqua;
     border-right: 5px solid aqua;
     border-bottom: 5px solid aqua;
 }
 
-ul{
-    border-bottom: 2px solid aqua;
-    display: flex;
-}
-
-.id{
+.router-style{
+    color: aqua;
     width: 10%;
 }
 
-li{
-    list-style: none;
-    padding: 5px;
-    width: 25%;
+tr{
+    width: 100%;
+}
+
+tbody tr{
+
+    &:hover{
+        opacity: 50%;
+        cursor: pointer;
+    }
+}
+
+th,
+td{
+    padding: 10px;
+    width: 10%;
+    border: 1px solid aqua;
 }
 
 </style>
