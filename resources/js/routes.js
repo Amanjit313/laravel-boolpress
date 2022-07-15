@@ -7,6 +7,7 @@ import HomeComp from './components/pages/HomeComp';
 import AboutComp from './components/pages/AboutComp';
 import BlogComp from './components/pages/BlogComp';
 import ContactsComp from './components/pages/ContactsComp';
+import DetailsComp from './components/pages/DetailsComp';
 
 const router = new VueRouter({
     mode: 'history',
@@ -32,6 +33,11 @@ const router = new VueRouter({
             name: 'contacts',
             component: ContactsComp
         },
+        {
+            path: '/details/:slug',
+            name: 'details',
+            component: DetailsComp
+        }
     ]
 });
 
